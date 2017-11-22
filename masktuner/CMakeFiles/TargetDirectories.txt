@@ -1,5 +1,5 @@
-/Users/jasonjmac/src/dev/masktuner/CMakeFiles/rebuild_cache.dir
-/Users/jasonjmac/src/dev/masktuner/CMakeFiles/edit_cache.dir
-/Users/jasonjmac/src/dev/masktuner/CMakeFiles/drawer.dir
-/Users/jasonjmac/src/dev/masktuner/CMakeFiles/displayimage.dir
-/Users/jasonjmac/src/dev/masktuner/CMakeFiles/masktuner.dir
+/Users/jasonjmac/src/caffe_utility/masktuner/CMakeFiles/rebuild_cache.dir
+/Users/jasonjmac/src/caffe_utility/masktuner/CMakeFiles/edit_cache.dir
+/Users/jasonjmac/src/caffe_utility/masktuner/CMakeFiles/drawer.dir
+/Users/jasonjmac/src/caffe_utility/masktuner/CMakeFiles/displayimage.dir
+/Users/jasonjmac/src/caffe_utility/masktuner/CMakeFiles/masktuner.dir

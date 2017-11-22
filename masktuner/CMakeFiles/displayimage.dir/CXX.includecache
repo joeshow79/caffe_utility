@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/jasonjmac/src/dev/masktuner/displayimage.cpp
+/Users/jasonjmac/src/caffe_utility/masktuner/displayimage.cpp
 stdio.h
 -
 opencv2/opencv.hpp

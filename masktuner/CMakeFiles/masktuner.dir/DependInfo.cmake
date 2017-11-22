@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/jasonjmac/src/dev/masktuner/masktuner.cpp" "/Users/jasonjmac/src/dev/masktuner/CMakeFiles/masktuner.dir/masktuner.cpp.o"
+  "/Users/jasonjmac/src/caffe_utility/masktuner/masktuner.cpp" "/Users/jasonjmac/src/caffe_utility/masktuner/CMakeFiles/masktuner.dir/masktuner.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "Clang")
 

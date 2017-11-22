@@ -262,7 +262,7 @@ int main(int argc, char** argv)
 	char* dir_name=argv[1];
     if( NULL == dir_name )  
     {  
-        cout<< "dir_name is null ! "<<endl;  
+        cout<< "<Image_Dir_Path> is not specified! "<<endl;  
         return -1;  
     }  
   
@@ -271,6 +271,7 @@ int main(int argc, char** argv)
     lstat( dir_name , &s );  
     if( ! S_ISDIR( s.st_mode ) )  
     {  
+        cout<<"<Image_Dir_Path>: "<<string(dir_name)<<" is not a valid directory!"<<dir_name<<endl;  
         return -1;  
     }  
       
@@ -308,7 +309,16 @@ int main(int argc, char** argv)
 			cmask_image_name[sizeof(cmask_image_name)-1]=0;
 			string output_name=string(basename(cmask_image_name));
 			output_name=string(dir_name)+"/"+"p_"+output_name;
+			strncpy(cmask_image_name,output_name.c_str(),sizeof(cmask_image_name));
+			cmask_image_name[sizeof(cmask_image_name)-1]=0;
 			//cout<<output_name<<endl;
+			//check if the mask has been processed,if yes, skip to next one
+			struct stat st;  
+			if(lstat( cmask_image_name , &st )==0)  {
+				cout<<"mask has been processed, will skip to next image"<<endl;
+				continue;
+			}
+
 
 			orig=cvLoadImage(orig_image_name.c_str(),1);
 			mask=cvLoadImage(mask_image_name.c_str(),1);
