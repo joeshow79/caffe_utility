@@ -227,9 +227,9 @@ void mouse_paint_callback(int event, int x, int y, int flags, void* param)
 }
 
 int usage(int argc){
+	cout<<"usage: masktuner <Image_Dir_Path>\n"<<endl;
 	if ( argc != 2 )
 	{
-		printf("usage: masktuner <Image_Dir_Path>\n");
 		return -1;
 	}
 	return 0;
@@ -237,6 +237,19 @@ int usage(int argc){
 
 int main(int argc, char** argv)
 {
+	char ch;
+	while((ch = getopt(argc, argv, "h")) != -1){  
+  
+        switch(ch){  
+            case 'h':  
+				usage(argc);
+                break;  
+            default:  
+                cout<<"invalid  option: "<< ch<<endl;;  
+                break;  
+        }  
+    }  
+
 	int result=usage(argc);
 	if(result!=0){
 		return result;
