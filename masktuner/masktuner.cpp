@@ -92,7 +92,7 @@ void show_mask( IplImage* img, CvRect Mask)
     cvRectangle(img,
                 cvPoint(Mask.x - op_size,Mask.y - op_size),
                 cvPoint(Mask.x + op_size,Mask.y + op_size),
-                cvScalar(0x00,0x00,0xff),    
+                cvScalar(0xff,0xff,0xff),    
                 CV_FILLED
                 );
 }
@@ -126,7 +126,7 @@ void show_eraser( IplImage* img, CvRect Eraser)
     cvRectangle(img,
                 cvPoint(Eraser.x - op_size,Eraser.y - op_size),
                 cvPoint(Eraser.x + op_size,Eraser.y + op_size),
-                cvScalar(0x80,0x80,0x80),    
+                cvScalar(0x00,0x00,0x00),    
                 CV_FILLED
                 );
 }
@@ -364,8 +364,10 @@ int main(int argc, char** argv)
 				}
 				cvShowImage("MaskTuner",temp);
 		
-				if(cvWaitKey(15) == 27) return 1;    //wait ESC key
-				if(cvWaitKey(30) == 13){//wait Return key
+				int input_key=cvWaitKey(1);
+
+				if(input_key == 27 || input_key==1048603) return 1;    //wait ESC key
+				if(input_key == 13 || input_key==1048586) {    //wait Enter key
 					cvSaveImage(output_name.c_str(),processed_mask);	
 					break;
 				}
